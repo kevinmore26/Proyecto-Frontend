@@ -2,29 +2,21 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { obtenerProductos } from '../services/productoService'
 import GroupProducts from '../components/GroupProducts'
+import Caracts from '../components/Caracts'
+import Cards from '../components/Cards'
 
-export default function PortadaView() {
 
-    const[productos,setProductos]=useState([])
-
-    const getProductos = async () =>
+const PortadaView = _=>
     {
-        try{
-            let productosObtenidos=await obtenerProductos()
-            setProductos(productosObtenidos)
-        }
-       catch(error)
-       {
-           console.log(error)
-       }
-    }
-    useEffect(()=>{
-        getProductos()
-    },[])
-// el contenido se procesa en return, para luego pasar al useeffect, iniciando la variable get productos(FASE DE MONTAJE), LUEGO SE EJECUTA EL USE
-    return (
-        <div>
-            <GroupProducts productos={productos}/>
-        </div>
-    )
-}
+      
+      return (<div>
+          <Caracts/>
+          <Cards/>
+          
+
+          
+          
+          
+          </div>)}
+
+      export default PortadaView
