@@ -8,8 +8,8 @@ import PortadaView from './views.js/PortadaView'
 export default function Routes ()
 {return(
     <div>
-       <Route path="/portadaview" exact component={PortadaView} />
-       <Route path="/" exact component={PortadaViewAdopciones} />    
+       <Route path="/" exact component={PortadaView} />
+       <Route path="/PortadaViewAdopciones" exact component={PortadaViewAdopciones} />    
     </div>
     )
 }
